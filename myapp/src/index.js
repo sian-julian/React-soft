@@ -19,11 +19,14 @@ import States from './useState/States';
 import Divs from './props/Divs';
 import Divp from './props/Divp';
 import Datafetching from './api/Datafetching';
-
+import Weather from './weather app/Weather';
+import Themeprovider from './context/Themeprovider'
+import Bg from './context/Bg'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Themeprovider>
     <BrowserRouter>
     <Routes>
       <Route path='/hpg' element={<Homepg></Homepg>}></Route>
@@ -34,8 +37,11 @@ root.render(
       <Route path='/div' element={<Divs></Divs>}></Route>
       <Route path='/divp' element={<Divp></Divp>}></Route>
       <Route path='/data' element={<Datafetching></Datafetching>}></Route>
+      <Route path='/wet' element={<Weather></Weather>}></Route>
+      <Route path='/bg' element={<Bg></Bg>}></Route>
     </Routes>
     </BrowserRouter>
+    </Themeprovider>
   </React.StrictMode>
 );
 
